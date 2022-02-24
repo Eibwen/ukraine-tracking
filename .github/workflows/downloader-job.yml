@@ -25,6 +25,7 @@ jobs:
     # going for this idea: https://www.reddit.com/r/DataHoarder/comments/t07uz0/comment/hy89gjn/?utm_source=reddit&utm_medium=web2x&context=3
     - name: Fetch latest data
       run: |-
+        mkdir -p html
         $CURL https://www.bbc.co.uk/news/live/world-europe-60454795 > html/bbc-world-europe.html
         $CURL https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html > html/cnn-live-ukraine-russia-20220223.html
         $CURL https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html > html/cnn-live-ukraine-russia-20220224.html
