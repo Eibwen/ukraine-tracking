@@ -11,7 +11,7 @@ jobs:
     name: Ukraine Job
     runs-on: ubuntu-latest
     env:
-      COMMAND: wget -np -m
+      COMMAND: wget --no-parent --mirror --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows
     steps:
     - name: Checkout
       uses: actions/checkout@master
@@ -22,15 +22,15 @@ jobs:
     # going for this idea: https://www.reddit.com/r/DataHoarder/comments/t07uz0/comment/hy89gjn/?utm_source=reddit&utm_medium=web2x&context=3
     - name: Fetch latest data
       run: |-
-        $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795 > bbc-world-europe.html
-        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html > cnn-live-ukraine-russia-20220223.html
-        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html > cnn-live-ukraine-russia-20220224.html
-        $COMMAND https://www.reddit.com/r/ukraine/ > reddit-ukraine.html
-        $COMMAND https://www.mirror.co.uk/news/world-news/russia-ukraine-war-live-putin-26295655 mirror-russia-ukraine-live.html
-        $COMMAND https://twitter.com/DefenceU > twitter-defenceu.html
-        $COMMAND https://www.reddit.com/r/worldnews/ > reddit-worldnews.html
-        $COMMAND https://www.pravda.com.ua/articles/2022/02/24/7325239/ > pravda-20220224.html
-        $COMMAND https://www.reddit.com/r/anime_titties > reddit-anime-titties.html
+        $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795
+        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html
+        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html
+        echo $COMMAND https://www.reddit.com/r/ukraine/
+        echo $COMMAND https://www.mirror.co.uk/news/world-news/russia-ukraine-war-live-putin-26295655
+        echo $COMMAND https://twitter.com/DefenceU
+        echo $COMMAND https://www.reddit.com/r/worldnews/
+        echo $COMMAND https://www.pravda.com.ua/articles/2022/02/24/7325239/
+        echo $COMMAND https://www.reddit.com/r/anime_titties
       continue-on-error: true
 
     # - name: Process data
