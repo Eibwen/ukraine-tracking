@@ -23,7 +23,7 @@ jobs:
       run: sudo apt-get install wget
 
     # going for this idea: https://www.reddit.com/r/DataHoarder/comments/t07uz0/comment/hy89gjn/?utm_source=reddit&utm_medium=web2x&context=3
-    - name: Fetch latest data
+    - name: Fetch (curl) latest data
       run: |-
         mkdir -p html
         $CURL https://www.bbc.co.uk/news/live/world-europe-60454795 > html/bbc-world-europe.html
@@ -35,7 +35,12 @@ jobs:
         $CURL https://www.reddit.com/r/worldnews/ > html/reddit-worldnews.html
         $CURL https://www.pravda.com.ua/articles/2022/02/24/7325239/ > html/pravda-20220224.html
         $CURL https://www.reddit.com/r/anime_titties > html/reddit-anime-titties.html
+      continue-on-error: true
+      timeout-minutes: 10
         
+    - name: Fetch (wget) latest data
+      run: |-
+        mkdir -p html
         echo $COMMAND_LESS https://www.reddit.com/r/ukraine/
         echo $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html
         echo $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html
@@ -46,6 +51,7 @@ jobs:
         echo $COMMAND https://www.pravda.com.ua/articles/2022/02/24/7325239/
         echo $COMMAND_LESS https://www.reddit.com/r/anime_titties
       continue-on-error: true
+      timeout-minutes: 10
 
     # - name: Process data
       # run: |-
