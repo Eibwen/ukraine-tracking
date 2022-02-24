@@ -11,7 +11,7 @@ jobs:
     name: Ukraine Job
     runs-on: ubuntu-latest
     env:
-      COMMAND: wget -np -e robots.off -m
+      COMMAND: wget -np -m
     steps:
     - name: Checkout
       uses: actions/checkout@master
