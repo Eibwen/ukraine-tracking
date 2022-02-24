@@ -1,0 +1,68 @@
+name: Scrape News Data
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '*/10 * * * *' # Every 10 mins. Ref https://crontab.guru/examples.html
+
+jobs:
+  scheduled:
+    name: Ukraine Job
+    runs-on: ubuntu-latest
+    env:
+      COMMAND: wget -np -e robots.off -m
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    
+    - name: Install wget
+      run: sudo apt-get install wget
+
+    # going for this idea: https://www.reddit.com/r/DataHoarder/comments/t07uz0/comment/hy89gjn/?utm_source=reddit&utm_medium=web2x&context=3
+    - name: Fetch latest data
+      run: |-
+        $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795 > bbc-world-europe.html
+        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html > cnn-live-ukraine-russia-20220223.html
+        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html > cnn-live-ukraine-russia-20220224.html
+        $COMMAND https://www.reddit.com/r/ukraine/ > reddit-ukraine.html
+        $COMMAND https://www.mirror.co.uk/news/world-news/russia-ukraine-war-live-putin-26295655 mirror-russia-ukraine-live.html
+        $COMMAND https://twitter.com/DefenceU > twitter-defenceu.html
+        $COMMAND https://www.reddit.com/r/worldnews/ > reddit-worldnews.html
+        $COMMAND https://www.pravda.com.ua/articles/2022/02/24/7325239/ > pravda-20220224.html
+        $COMMAND https://www.reddit.com/r/anime_titties > reddit-anime-titties.html
+      continue-on-error: true
+
+    # - name: Process data
+      # run: |-
+        # # grep -Poz '(var ary[^;]+?;)' allergy_v3.raw.html
+        # awk '/var ary/,/;/' $HTML_NAME > $JS_ARRAYS_NAME
+      # continue-on-error: true
+
+    # - name: Setup Node.js environment
+      # uses: actions/setup-node@v2.1.4
+      # with:
+        # # Set always-auth in npmrc
+        # always-auth: # optional, default is false
+        # # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+        # node-version: # optional
+        # # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
+        # architecture: # optional
+        # # Set this option if you want the action to check for the latest available version that satisfies the version spec
+        # check-latest: # optional
+        # # Optional registry to set up for auth. Will set the registry in a project level .npmrc and .yarnrc file, and set up auth to read in from env.NODE_AUTH_TOKEN
+        # registry-url: # optional
+        # # Optional scope for authenticating against scoped registries
+        # scope: # optional
+        # # Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
+        # token: # optional, default is ${{ github.token }}
+    # - run: (npm install && npm run start)
+
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date +"%Y-%m-%d %T")
+        git commit -m "Latest data: ${timestamp} (from: $GITHUB_EVENT_NAME)" || exit 0
+        git push
