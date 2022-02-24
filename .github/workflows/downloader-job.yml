@@ -23,10 +23,10 @@ jobs:
     # going for this idea: https://www.reddit.com/r/DataHoarder/comments/t07uz0/comment/hy89gjn/?utm_source=reddit&utm_medium=web2x&context=3
     - name: Fetch latest data
       run: |-
-        $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795
+        $COMMAND https://www.reddit.com/r/ukraine/
         $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html
         $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html
-        echo $COMMAND https://www.reddit.com/r/ukraine/
+        $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795
         echo $COMMAND https://www.mirror.co.uk/news/world-news/russia-ukraine-war-live-putin-26295655
         echo $COMMAND https://twitter.com/DefenceU
         echo $COMMAND https://www.reddit.com/r/worldnews/
