@@ -11,7 +11,7 @@ jobs:
     name: Ukraine Job
     runs-on: ubuntu-latest
     env:
-      COMMAND: timeout 2m wget --no-parent --mirror --page-requisites --adjust-extension --convert-links --restrict-file-names=windows
+      COMMAND: wget --timeout=20 --no-parent --mirror --page-requisites --adjust-extension --convert-links --restrict-file-names=windows
       COMMAND_MORE: wget --no-parent --mirror --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows
     steps:
     - name: Checkout
