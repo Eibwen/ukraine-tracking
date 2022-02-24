@@ -4,14 +4,15 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron:  '*/10 * * * *' # Every 10 mins. Ref https://crontab.guru/examples.html
+    - cron:  '*/15 * * * *' # Every 15 mins. Ref https://crontab.guru/examples.html
 
 jobs:
   scheduled:
     name: Ukraine Job
     runs-on: ubuntu-latest
     env:
-      COMMAND: wget --no-parent --mirror --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows
+      COMMAND: timeout 2m wget --no-parent --mirror --page-requisites --adjust-extension --convert-links --restrict-file-names=windows
+      COMMAND_MORE: wget --no-parent --mirror --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows
     steps:
     - name: Checkout
       uses: actions/checkout@master
