@@ -11,9 +11,9 @@ jobs:
     name: Ukraine Job
     runs-on: ubuntu-latest
     env:
-      COMMAND: wget --timeout=20 --no-parent --mirror --page-requisites --adjust-extension --convert-links --restrict-file-names=windows
-      COMMAND_LESS: wget --timeout=20 --no-parent --mirror --adjust-extension --convert-links --restrict-file-names=windows
-      COMMAND_MORE: wget --no-parent --mirror --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows
+      COMMAND: echo wget --timeout=20 --no-parent --mirror --page-requisites --adjust-extension --convert-links --restrict-file-names=windows
+      COMMAND_LESS: echo wget --timeout=20 --no-parent --mirror --adjust-extension --convert-links --restrict-file-names=windows
+      COMMAND_MORE: echo wget --no-parent --mirror --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows
       CURL: curl
     steps:
     - name: Checkout
@@ -40,16 +40,15 @@ jobs:
         
     - name: Fetch (wget) latest data
       run: |-
-        mkdir -p html
-        echo $COMMAND_LESS https://www.reddit.com/r/ukraine/
-        echo $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html
-        echo $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html
-        echo $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795
-        echo $COMMAND https://www.mirror.co.uk/news/world-news/russia-ukraine-war-live-putin-26295655
-        echo $COMMAND https://twitter.com/DefenceU
-        echo $COMMAND_LESS https://www.reddit.com/r/worldnews/
-        echo $COMMAND https://www.pravda.com.ua/articles/2022/02/24/7325239/
-        echo $COMMAND_LESS https://www.reddit.com/r/anime_titties
+        $COMMAND_LESS https://www.reddit.com/r/ukraine/
+        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-23-22/index.html
+        $COMMAND https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html
+        $COMMAND https://www.bbc.co.uk/news/live/world-europe-60454795
+        $COMMAND https://www.mirror.co.uk/news/world-news/russia-ukraine-war-live-putin-26295655
+        $COMMAND https://twitter.com/DefenceU
+        $COMMAND_LESS https://www.reddit.com/r/worldnews/
+        $COMMAND https://www.pravda.com.ua/articles/2022/02/24/7325239/
+        $COMMAND_LESS https://www.reddit.com/r/anime_titties
       continue-on-error: true
       timeout-minutes: 10
 
