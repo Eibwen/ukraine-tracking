@@ -135,6 +135,13 @@ if(top != self) top.location.replace(location);
 <style type="text/css">
 <!--
 
+.container_sub_side_news .container_title {padding-bottom: 0;}
+.container_sub_side_news_theme .container_sub_news_wrapper {padding-top: 20px;}
+
+.war_section .layout-main {padding: 0 12px;}
+
+.container_special {display: none;}
+
 .top_options_item_lang .options_text {padding-left: 6px; padding-right: 6px;}
 
 .article_wide_news .article_footer {flex-direction: row-reverse;}
@@ -943,7 +950,7 @@ gtag('config', 'UA-554376-23');
 
 
 <!-- DFP GOOGLE -->
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script> !(function () { window.googletag = window.googletag || {}; window.vmpbjs = window.vmpbjs || {}; window.vpb = window.vpb || {}; vpb.fastLoad = true; googletag.cmd = googletag.cmd || []; vmpbjs.cmd = vmpbjs.cmd || []; var cmds = []; try{ cmds = googletag.cmd.slice(0); googletag.cmd.length = 0; }catch(e){} var ready = false; function exec(cb) { return cb.call(googletag); } var overriden = false; googletag.cmd.push(function () { overriden = true; googletag.cmd.unshift = function (cb) { if (ready) { return exec(cb); } cmds.unshift(cb); if (cb._startgpt) { ready = true; for (var k = 0; k < cmds.length; k++) { exec(cmds[k]); } } }; googletag.cmd.push = function (cb) { if (ready) { return exec(cb); } cmds.push(cb); }; }); if(!overriden){ googletag.cmd.push = function (cb) { cmds.push(cb); }; googletag.cmd.unshift = function (cb) { cmds.unshift(cb); if (cb._startgpt) { ready = true; if (googletag.apiReady) { cmds.forEach(function (cb) { googletag.cmd.push(cb); }); } else { googletag.cmd = cmds; } } }; } var dayMs = 36e5, cb = parseInt(Date.now() / dayMs), vpbSrc = '//player.adtcdn.com/prebidlink/' + cb + '/wrapper_hb_485066_12427.js', pbSrc = vpbSrc.replace('wrapper_hb', 'hb'), gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; s.defer=false; c.appendChild(s); s.onload = cb; s.onerror = function(){ var fn = function(){}; fn._startgpt = true; googletag.cmd.unshift(fn); }; return s; } loadScript(pbSrc); loadScript(gptSrc); loadScript(vpbSrc); })() </script>
 <script>
   window.googletag = window.googletag || {cmd: []};
   googletag.cmd.push(function() {
@@ -1071,17 +1078,7 @@ gtag('config', 'UA-554376-23');
 <body class="article_layout">
 
 <div class="unit_header_banner">
-<style type="text/css">
-.adslot_1 { display:inline-block;}
-@media (max-width: 400px) { .adslot_1 { display: none; } }
-@media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
-@media (min-width:900px) { .adslot_1 { width: 980px; height: 120px; } }
-</style>
-<ins class="adsbygoogle adslot_1"
-   data-ad-client="ca-pub-4177955927398446"
-   data-ad-slot="8288515293"></ins>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 </div>
 
 
@@ -1227,7 +1224,7 @@ function tw_share() {
 </script>
 
 <div class="post_statistic">
-    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>884058</div>
+    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>890908</div>
     
 </div>
 
@@ -1250,15 +1247,12 @@ function tw_share() {
 <p class="p1"><span class="s1">Відбулось збройне вторгнення військ Російської Федерації по всім напрямам, включаючи ділянку кордону з республікою Білорусь та адмінмежу з АР Крим.&nbsp;</span></p>
 <p>По всій Україні, від окупованого сходу до підконтрольного уряду заходу, <a href="https://www.pravda.com.ua/news/2022/02/24/7325225/">почались ракетні удари</a>. РФ б&lsquo;є по військових базах, аеропортах і стратегічних об&lsquo;єктах.&nbsp;На Сумщині загарбники напали на загін прикордонників. На кількох ділянках кордону заходить військова техніка: танки, БТР, ГРАДи. З білоруської сторони росіяни здійснили прорив на танках. На морі кілька нерозпізнаних об'єктів рухаються у бік України.</p>
 <p>Росіяни захопили села Мілове та Городище на Луганщині.&nbsp;</p><center>
-<!-- /6942251/pravda_mobile -->
 <div id='div-gpt-ad-1607190323083-0'>
   <script>
     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1607190323083-0'); });
   </script>
 </div>
 </center>
-
-
 <p></p>
 
 <div class="more"><span style="display: inline;" id="sort">Сортувати<span class="sort_arrow sort_arrow_down"></span></div><div id="post_online_holder" class="post_online_holder_3"><div class="post_online__item" id="1645813703"><div class="post_online__time">20:28</div><div class="post_online__text"><p>Батальйони територіальної оборони Києва отримали протитанкові керовані ракети малої дальності NLAW.</p>
@@ -2095,7 +2089,7 @@ function tw_share() {
 
                         <div class="unit_main_banner_2a sidebar__inner" data-sticky_column>
                             <div class="unit_side_banner">
-                                <ins class="adsbygoogle"
+                                <!--ins class="adsbygoogle"
      style="display:block"
      data-ad-format="fluid"
      data-ad-layout-key="-8f+1r-d5+er+db"
@@ -2103,11 +2097,11 @@ function tw_share() {
      data-ad-slot="2815053615"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script-->
 
 
 
-<div id="inside_right_3"></div>
+<!--div id="inside_right_3"></div-->
 
 
 <div class="sticked">
@@ -2137,7 +2131,7 @@ function tw_share() {
             </div>
         </article>
     </div>
-<div data-vr-zone=Choice class=section_choice_articles><div class=layout_main><div class=container_title>Головне на Українській правді</div><div class=container_choice_articles_list_wrapper><div class=g-scrolling-carousel><div class=items><div data-vr-contentbox="&quot;Коли місяць сховався за хмарами, я поплив на берег&quot;. Історія викрадення і втечі судді Чауса з перших вуст " data-vr-contentbox-url="https://www.pravda.com.ua/cdn/cd1/chaus/" target=_blank class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/0/6090828-chaus420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href="https://www.pravda.com.ua/cdn/cd1/chaus/" target=_blank>"Коли місяць сховався за хмарами, я поплив на берег". Історія викрадення і втечі судді Чауса з перших вуст <span></span></a></h3></div><div class=article_author>Соня Лукашова</div></div></div></div><div data-vr-contentbox="Завтра була війна. Історія &quot;України&quot; від першої особи " data-vr-contentbox-url=/articles/2022/02/18/7324405/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/e/1/e1e488b-ukraina420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/02/18/7324405/>Завтра була війна. Історія "України" від першої особи <span></span></a></h3></div><div class=article_author> — Михайло Кригель</div></div></div></div><div data-vr-contentbox="Патрульний Сергій Петрик про поліцію зсередини, можливості Монастирського і сумку Трухіна " data-vr-contentbox-url=/articles/2022/02/14/7323866/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/8/a/8ae4d58-42politseiskyi-petryk.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/02/14/7323866/>Патрульний Сергій Петрик про поліцію зсередини, можливості Монастирського і сумку Трухіна <span></span></a></h3></div><div class=article_author> — Ольга Кириленко, Роман Романюк</div></div></div></div><div data-vr-contentbox="Велика паспортизація. Як &quot;Україна&quot; повертає скандальний ЄДАПС у виробництво біометричних паспортів " data-vr-contentbox-url=/articles/2022/02/9/7323295/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/e/6/e6d2011-passport420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/02/9/7323295/>Велика паспортизація. Як "Україна" повертає скандальний ЄДАПС у виробництво біометричних паспортів <span></span></a></h3></div><div class=article_author> — Соня Лукашова</div></div></div></div><div data-vr-contentbox="Contra spem spero! Чого очікувати від України на зимовій Олімпіаді " data-vr-contentbox-url=/articles/2022/02/4/7322776/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/0/a/0a65dc8-olimpics420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>олімпіада</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/02/4/7322776/>Contra spem spero! Чого очікувати від України на зимовій Олімпіаді <span></span></a></h3></div><div class=article_author> — Євген Будерацький</div></div></div></div><div data-vr-contentbox="Велике будівництво. Як Зеленський та його партія готуються до виборів " data-vr-contentbox-url=/articles/2022/02/3/7322656/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/8/8/88b69f9-zel420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>Політрозклади</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/02/3/7322656/>Велике будівництво. Як Зеленський та його партія готуються до виборів <span></span></a></h3></div><div class=article_author> — Роман Кравець</div></div></div></div><div data-vr-contentbox="Іван Семесюк: Ми всі довбой*би поголовно. Але у нас в серцях горить вогник свободи " data-vr-contentbox-url=/articles/2022/01/28/7321946/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/c/f/cf1c791-42.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/01/28/7321946/>Іван Семесюк: Ми всі довбой*би поголовно. Але у нас в серцях горить вогник свободи <span></span></a></h3></div><div class=article_author> — Михайло Кригель, Ельдар Сарахман, Дмитро Ларін</div></div></div></div><div data-vr-contentbox="Волонтерка Аліна Михайлова про повернення з війни, нагороду &quot;Да Вінчі&quot; та внутрішній флюгер " data-vr-contentbox-url=/articles/2022/01/26/7321702/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/c/6/c6ec2f8-42-volonter.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/01/26/7321702/>Волонтерка Аліна Михайлова про повернення з війни, нагороду "Да Вінчі" та внутрішній флюгер <span></span></a></h3></div><div class=article_author> — Ольга Кириленко</div></div></div></div><div data-vr-contentbox="Екскерівник розвідки Бурба: Питання не в тому, чи буде наступ. Питання в тому, чи ми готові " data-vr-contentbox-url=/articles/2022/01/25/7321552/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/0/b/0b2bc2d-42rozvidka.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/01/25/7321552/>Екскерівник розвідки Бурба: Питання не в тому, чи буде наступ. Питання в тому, чи ми готові <span></span></a></h3></div><div class=article_author> — Севгіль Мусаєва, Соня Лукашова</div></div></div></div><div data-vr-contentbox="Які перспективи великої війни в Україні? " data-vr-contentbox-url=/articles/2022/01/24/7321423/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/7/f/7fe7dfc-war420--1-.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/01/24/7321423/>Які перспективи великої війни в Україні? <span></span></a></h3></div><div class=article_author> — Андрій Загороднюк, Аліна Фролова , Олексій Павлючик</div></div></div></div></div></div></div></div></div><script src="/misc/v6/jquery.gScrollingCarousel.js"></script><script> $(document).ready(function(){if(window.matchMedia("(min-width: 990px)").matches){$(".g-scrolling-carousel .items").gScrollingCarousel();
+<div data-vr-zone=Choice class=section_choice_articles><div class=layout_main><div class=container_title>Головне на Українській правді</div><div class=container_choice_articles_list_wrapper><div class=g-scrolling-carousel><div class=items><div data-vr-contentbox="Святослав Вакарчук: Я перестав записувати звернення до росіян, це вже не має жодного змісту " data-vr-contentbox-url=/articles/2022/03/19/7332765/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/2/d/2d2b1e4-42vacarchuk.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/19/7332765/>Святослав Вакарчук: Я перестав записувати звернення до росіян, це вже не має жодного змісту <span></span></a></h3></div><div class=article_author> — Роман Кравець</div></div></div></div><div data-vr-contentbox="Війна на вулиці Миру. Дизайнер УП провів 16 днів у Ворзелі, куди зайшли танки РФ. 10 днів із ним не було зв'язку. Але він врятувався і розповів усе, що бачив " data-vr-contentbox-url=/articles/2022/03/14/7331350/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/4/6/468b464-vorzel420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/14/7331350/>Війна на вулиці Миру. Дизайнер УП провів 16 днів у Ворзелі, куди зайшли танки РФ. 10 днів із ним не було зв'язку. Але він врятувався і розповів усе, що бачив <span></span></a></h3></div><div class=article_author> — Євген Руденко, Андрій Калістратенко</div></div></div></div><div data-vr-contentbox="Евакуйовані з пекла. Про що говорять люди, які вирвались з Бучі і Гостомеля " data-vr-contentbox-url=/articles/2022/03/13/7331027/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/a/0/a0a97bb-42evacuacia.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/13/7331027/>Евакуйовані з пекла. Про що говорять люди, які вирвались з Бучі і Гостомеля <span></span></a></h3></div><div class=article_author> — Ольга Кириленко, Євген Будерацький</div></div></div></div><div data-vr-contentbox="&quot;Ї*аш їх!&quot; або Доброго ранку, ми з України! &#8722; Віталій Кім  " data-vr-contentbox-url=/articles/2022/03/9/7329785/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/8/b/8bb1b03-42kim.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/9/7329785/>"Ї*аш їх!" або Доброго ранку, ми з України! &#8722; Віталій Кім  <span></span></a></h3></div><div class=article_author> — Михайло Кригель</div></div></div></div><div data-vr-contentbox="Олігархічна евакуація. УП з'ясувала, де зараз українські олігархи та їх літаки " data-vr-contentbox-url=/articles/2022/03/9/7329753/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/3/63db117-42oligarhu.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/9/7329753/>Олігархічна евакуація. УП з'ясувала, де зараз українські олігархи та їх літаки <span></span></a></h3></div><div class=article_author> — Михайло Ткач</div></div></div></div><div data-vr-contentbox="Ірпінь очима фотографа: евакуація мешканців та зруйноване місто після обстрілів " data-vr-contentbox-url=/articles/2022/03/9/7329618/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/a/1/a1505b5-42irpin.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>Фоторепортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/9/7329618/>Ірпінь очима фотографа: евакуація мешканців та зруйноване місто після обстрілів <span></span></a></h3></div><div class=article_author> — "Українська правда"</div></div></div></div><div data-vr-contentbox="Репортаж з Києва. Війна очима журналіста " data-vr-contentbox-url=/articles/2022/03/4/7328163/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/d/c/dc82a67-42evakuacia.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/4/7328163/>Репортаж з Києва. Війна очима журналіста <span></span></a></h3></div><div class=article_author> — Дмитро Рясний</div></div></div></div><div data-vr-contentbox="Танки і янголи. Українські діти малюють війну " data-vr-contentbox-url=/articles/2022/03/1/7327232/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/f/e/fe4b41c-42malunky.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/03/1/7327232/>Танки і янголи. Українські діти малюють війну <span></span></a></h3></div><div class=article_author> — "Українська правда"</div></div></div></div><div data-vr-contentbox="&quot;Вони боятимуться в туалет сходити&quot;. Чому російський окупант даремно пішов війною на Україну. Репортаж про сільську самооборону " data-vr-contentbox-url=/articles/2022/02/26/7326115/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/b/a/ba33e22-hozki420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/02/26/7326115/>"Вони боятимуться в туалет сходити". Чому російський окупант даремно пішов війною на Україну. Репортаж про сільську самооборону <span></span></a></h3></div><div class=article_author> — Євген Руденко, Назарій Мазилюк</div></div></div></div><div data-vr-contentbox="&quot;Коли місяць сховався за хмарами, я поплив на берег&quot;. Історія викрадення і втечі судді Чауса з перших вуст " data-vr-contentbox-url="https://www.pravda.com.ua/cdn/cd1/chaus/" target=_blank class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/0/6090828-chaus420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href="https://www.pravda.com.ua/cdn/cd1/chaus/" target=_blank>"Коли місяць сховався за хмарами, я поплив на берег". Історія викрадення і втечі судді Чауса з перших вуст <span></span></a></h3></div><div class=article_author>Соня Лукашова</div></div></div></div></div></div></div></div></div><script src="/misc/v6/jquery.gScrollingCarousel.js"></script><script> $(document).ready(function(){if(window.matchMedia("(min-width: 990px)").matches){$(".g-scrolling-carousel .items").gScrollingCarousel();
 }});</script>
 </div>
 <footer class="footer">
@@ -2189,17 +2183,7 @@ function tw_share() {
       </div>
     </div>
     <div class="counters">
-<div style=" display:-moz-inline-stack; display: inline-block; _overflow: hidden; *zoom:1; *display: inline; vertical-align: top;"> <!--LiveInternet counter--><script type="text/javascript"><!--
-document.write("<a href='http://www.liveinternet.ru/click;ukrpravda' "+
-"target=_blank rel='nofollow'><img src='//counter.yadro.ru/hit;ukrpravda?t14.2;r"+
-escape(document.referrer)+((typeof(screen)=="undefined")?"":
-";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
-screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
-";"+Math.random()+
-"' alt='' title='LiveInternet: показано число просмотров за 24"+
-" часа, посетителей за 24 часа и за сегодня' "+
-"border='0' width='88' height='31'><\/a>")
-//--></script><!--/LiveInternet--> </div>&nbsp;&nbsp;
+
     </div>
   </div>
 </footer>
