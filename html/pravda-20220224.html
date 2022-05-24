@@ -123,6 +123,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  } )(window,document,'script','dataLayer','GTM-WW7B57');</script>
 <!-- End Google Tag Manager -->
 
+
+<!-- adrvr -->
+
 <script type="text/javascript">
 if(top != self) top.location.replace(location);
 </script>
@@ -931,10 +934,6 @@ text-align: center;
 
 .war_block .war_item:first-child {min-width: 120px;}
 .war_block .war_item:nth-child(2) {min-width: 120px;}
-
-@media screen and (max-width: 989px) {
-.container_top_articles_list_wrapper .article_grid .article_header {font-size: 1.44em; padding-top: 12px;}
-}
 -->
 </style>
 
@@ -950,6 +949,91 @@ gtag('config', 'UA-554376-23');
 
 
 
+
+
+<!-- DFP GOOGLE -->
+<script> !(function () { window.googletag = window.googletag || {}; window.vmpbjs = window.vmpbjs || {}; window.vpb = window.vpb || {}; vpb.fastLoad = true; googletag.cmd = googletag.cmd || []; vmpbjs.cmd = vmpbjs.cmd || []; var cmds = []; try{ cmds = googletag.cmd.slice(0); googletag.cmd.length = 0; }catch(e){} var ready = false; function exec(cb) { return cb.call(googletag); } var overriden = false; googletag.cmd.push(function () { overriden = true; googletag.cmd.unshift = function (cb) { if (ready) { return exec(cb); } cmds.unshift(cb); if (cb._startgpt) { ready = true; for (var k = 0; k < cmds.length; k++) { exec(cmds[k]); } } }; googletag.cmd.push = function (cb) { if (ready) { return exec(cb); } cmds.push(cb); }; }); if(!overriden){ googletag.cmd.push = function (cb) { cmds.push(cb); }; googletag.cmd.unshift = function (cb) { cmds.unshift(cb); if (cb._startgpt) { ready = true; if (googletag.apiReady) { cmds.forEach(function (cb) { googletag.cmd.push(cb); }); } else { googletag.cmd = cmds; } } }; } var dayMs = 36e5, cb = parseInt(Date.now() / dayMs), vpbSrc = '//player.adtcdn.com/prebidlink/' + cb + '/wrapper_hb_485066_12427.js', pbSrc = vpbSrc.replace('wrapper_hb', 'hb'), gptSrc = '//securepubads.g.doubleclick.net/tag/js/gpt.js', c = document.head || document.body || document.documentElement; function loadScript(src, cb) { var s = document.createElement('script'); s.src = src; s.defer=false; c.appendChild(s); s.onload = cb; s.onerror = function(){ var fn = function(){}; fn._startgpt = true; googletag.cmd.unshift(fn); }; return s; } loadScript(pbSrc); loadScript(gptSrc); loadScript(vpbSrc); })() </script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    var mapping3 = googletag.sizeMapping()
+                            .addSize([992, 0], [])
+                            .addSize([0, 0], [[336, 280]])
+                            .build();
+
+    var mapping4 = googletag.sizeMapping()
+                            .addSize([992, 0], [])
+                            .addSize([0, 0], [[300, 250]])
+                            .build();
+
+    var mapping6 = googletag.sizeMapping()
+                            .addSize([1160, 0], [[300, 600]])
+                            .addSize([0, 0], [])
+                            .build();
+
+    var mapping8 = googletag.sizeMapping()
+                            .addSize([1160, 0], [[300, 250], [ 300, 600], 'fluid'])
+                            .addSize([0, 0], [])
+                            .build();
+
+    var mapping9 = googletag.sizeMapping()
+                            .addSize([801, 0], [[300, 250]])
+                            .addSize([0, 0], [])
+                            .build();
+
+    var mapping10 = googletag.sizeMapping()
+                             .addSize([992, 0], [])
+                             .addSize([0, 0], [[300, 250], [ 336, 280]])
+                             .build();
+
+    var mapping11 = googletag.sizeMapping()
+                             .addSize([768, 0], [[580, 400], [336, 280], 'fluid'])
+                             .addSize([0, 0], [[336, 280], [300, 250], 'fluid'])
+                             .build();
+
+    var mapping12 = googletag.sizeMapping()
+                             .addSize([1160, 0], [[300, 250]])
+                             .addSize([0, 0], [])
+                             .build();
+
+    var mapping14 = googletag.sizeMapping()
+                             .addSize([768, 0], [[580, 400],[336, 280]])
+                             .addSize([0, 0], [[300, 250],[336, 280]])
+                             .build();
+    googletag.defineSlot('/6942251/pravda_main_news_mobile', [[336,280]], 'div-gpt-ad-1603705791480-0')
+             .defineSizeMapping(mapping3)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/pravda_main_middle/pravda_main_620x200_mobile', [[300,250]], 'div-gpt-ad-1610459788573-0')
+             .defineSizeMapping(mapping4)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/Pravda_main_300x600_right', [[300,600]], 'div-gpt-ad-1619684735564-0')
+             .defineSizeMapping(mapping6)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/inside300x250right', [[300,250],[300,600], 'fluid'], 'div-gpt-ad-1594652693856-0')
+             .defineSizeMapping(mapping8)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/300*250_test', [[300,250]], 'div-gpt-ad-1601472617392-0')
+             .defineSizeMapping(mapping9)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/pravda_mobile', [[300,250],[336,280]], 'div-gpt-ad-1607190323083-0')
+             .defineSizeMapping(mapping10)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/pravda_news_section_centre', [[580, 400],[336,280],[300,250], 'fluid'], 'div-gpt-ad-1581427573548-0')
+             .defineSizeMapping(mapping11)
+             .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/Pravda_main_300x250_right', [300, 250], 'div-gpt-ad-1605126459875-0')
+            .defineSizeMapping(mapping12)
+            .addService(googletag.pubads());
+    googletag.defineSlot('/6942251/620x200_pravda', [[336, 280], [300, 250], [580, 400]], 'div-gpt-ad-1648892004411-0')
+            .defineSizeMapping(mapping14)
+            .addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<!-- End GPT Tag -->
+
 <!-- Бібліотека Адміксер -->
 <!-- script src="https://cdn.admixer.net/scripts3/loader2.js" async
         data-inv="//inv-nets.admixer.net/"
@@ -962,65 +1046,35 @@ gtag('config', 'UA-554376-23');
 
 <script src="https://www.pravda.com.ua/misc/jquery.sticky.js"></script>
 
+<meta name="facebook-domain-verification" content="n3ncb6b7e0ogng7r4gbpn53lcczmyq" />
 
 <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=2"></script>
+<script async="async" src="https://cdn.membrana.media/upr/ym.js"></script>
 
 <script>
   window.notsyCmd = window.notsyCmd || [];
   window.notsyCmd.push(function() {
     window.notsyInit({
       pageVersionAutodetect: true,
-            targeting: [['lang', 'ua']] // возможные значения ua, ru, en
+      targeting: [['lang', 'ua']] // возможные значения ua, ru, en
     });
   });
 </script>
-
-<style>
-  .nts-ad {display: flex; flex-direction: column; align-items: center; justify-content: center}
-  .nts-ad-h250 {min-height: 250px}
-  .nts-ad-h280 {min-height: 280px}
-  .nts-ad-h600 {min-height: 600px; justify-content: flex-start}
-
-    .nts-ad[data-ym-ad="UPR_BTA"], .nts-ad[data-ym-ad="UPR_ITC"] {min-height: 280px}
-
-    @media (max-width: 420px) {
-        #UPR_ITA iframe {min-width: 336px}
-    }
-
-    @media (max-width: 800px) {
-        .unit_news_banner_left .nts-ad[data-ym-ad="UPR_SBL"], .nts-ad[data-ym-ad="UPR_SBL"] {display: none !important}
-    }
-
-    @media (min-width: 993px) {
-        .nts-ad[data-ym-ad="UPR_ITA"], .nts-ad[data-ym-ad="UPR_ITC_2"] {display: none}
-    }
-
-    @media (max-width: 1160px) {
-        .unit_side_banner .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_2"] {display: none}
-    }
-
-    .nts-video-wrapper {padding-top: 10px;padding-bottom: 20px}
-    .nts-video-label {font-size: 12px; font-family: "Helvetica Neue", Arial, sans-serif; line-height: 12px; text-transform: uppercase; color: #999; text-align: center}
-    .nts-video {height: calc(100vw / 16 * 9); max-height: 360px;  margin: 10px auto 0}
-    @media (min-width: 481px) {
-        .nts-video {height: calc((100vw - 24) / 16 * 9)}
-    }
-    @media (min-width: 715px) {
-        .nts-video {height: 360px}
-    }
-    @media (min-width: 801px) {
-        .nts-video {height: calc((100vw - 350) / 16 * 9)}
-    }
-    @media (min-width: 1161px) {
-        .nts-video {height: calc((100vw - 648) / 16 * 9)}
-    }
-</style>
 </head>
 <body class="article_layout">
 
 <div class="unit_header_banner">
-
+<style type="text/css">
+.adslot_1 { display:inline-block;}
+@media (max-width: 400px) { .adslot_1 { display: none; } }
+@media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
+@media (min-width:900px) { .adslot_1 { width: 980px; height: 120px; } }
+</style>
+<ins class="adsbygoogle adslot_1"
+   data-ad-client="ca-pub-4177955927398446"
+   data-ad-slot="8288515293"></ins>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 
@@ -1166,7 +1220,7 @@ function tw_share() {
 </script>
 
 <div class="post_statistic">
-    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>899073</div>
+    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>898845</div>
     
 </div>
 
@@ -1188,10 +1242,13 @@ function tw_share() {
                             <p>24 лютого о 5 ранку <a href="https://www.pravda.com.ua/news/2022/02/24/7325222/">Росія напала на Україну</a> під приводом "захисту людей від геноциду київського режиму".&nbsp;</p>
 <p class="p1"><span class="s1">Відбулось збройне вторгнення військ Російської Федерації по всім напрямам, включаючи ділянку кордону з республікою Білорусь та адмінмежу з АР Крим.&nbsp;</span></p>
 <p>По всій Україні, від окупованого сходу до підконтрольного уряду заходу, <a href="https://www.pravda.com.ua/news/2022/02/24/7325225/">почались ракетні удари</a>. РФ б&lsquo;є по військових базах, аеропортах і стратегічних об&lsquo;єктах.&nbsp;На Сумщині загарбники напали на загін прикордонників. На кількох ділянках кордону заходить військова техніка: танки, БТР, ГРАДи. З білоруської сторони росіяни здійснили прорив на танках. На морі кілька нерозпізнаних об'єктів рухаються у бік України.</p>
-<p>Росіяни захопили села Мілове та Городище на Луганщині.&nbsp;</p><div class="nts-ad nts-ad-h280" data-ym-ad="UPR_ITA">
-    <div id="UPR_ITA"></div>
+<p>Росіяни захопили села Мілове та Городище на Луганщині.&nbsp;</p><center>
+<div id='div-gpt-ad-1607190323083-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1607190323083-0'); });
+  </script>
 </div>
-
+</center>
 <p></p>
 
 <div class="more"><span style="display: inline;" id="sort">Сортувати<span class="sort_arrow sort_arrow_down"></span></div><div id="post_online_holder" class="post_online_holder_3"><div class="post_online__item" id="1645813703"><div class="post_online__time">20:28</div><div class="post_online__text"><p>Батальйони територіальної оборони Києва отримали протитанкові керовані ракети малої дальності NLAW.</p>
@@ -1988,9 +2045,13 @@ function tw_share() {
 
 
                         <div class="unit_news_banner_bottom">
-                        <div class="nts-ad" data-ym-ad="UPR_BTA">
-    <div id="UPR_BTA"></div>
+                        <div id='div-gpt-ad-1648892004411-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1648892004411-0'); });
+  </script>
 </div>
+
+
                         </div>
 
 
@@ -2021,13 +2082,36 @@ function tw_share() {
 
                         <div class="unit_main_banner_2a sidebar__inner" data-sticky_column>
                             <div class="unit_side_banner">
-                                <div class="sticked">
+                                <!--ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-8f+1r-d5+er+db"
+     data-ad-client="ca-pub-4177955927398446"
+     data-ad-slot="2815053615"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script-->
+
+
+
+<!--div id="inside_right_3"></div-->
+
+
+<div class="sticked">
 <div style="min-width: 300px; min-height: 600px;">
-<div class="nts-ad nts-ad-h600" data-ym-ad="UPR_SBR_2">
-    <div id="UPR_SBR_2"></div>
+<div id='div-gpt-ad-1594652693856-0'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1594652693856-0'); });
+  </script>
 </div>
 </div>
 </div>
+
+
+
+
+
+
                             </div>
                         </div>
 
@@ -2120,6 +2204,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <script type="text/javascript" src="/misc/cabinet.js?6"></script>
+
+
+
 
 
 <!-- (C)2000-2021 Gemius SA - gemiusPrism  / Wezel zbiorczy pravda.com.ua/Strona glowna serwisu -->
