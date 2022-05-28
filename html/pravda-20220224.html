@@ -934,8 +934,6 @@ text-align: center;
 
 @media screen and (max-width: 989px) {
 .container_top_articles_list_wrapper .article_grid .article_header {font-size: 1.44em; padding-top: 12px;}
-.container_top .container_sub_top_news_wrapper {overflow-x: hidden;}
-.war_block .war_item:nth-child(2) {min-width: 90px; padding-right: 15px;}
 }
 -->
 </style>
@@ -965,19 +963,15 @@ gtag('config', 'UA-554376-23');
 <script src="https://www.pravda.com.ua/misc/jquery.sticky.js"></script>
 
 
-<script>
-    window.uprLang = 'ua';
-</script>
-
 <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=4"></script>
+<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=2"></script>
 
 <script>
   window.notsyCmd = window.notsyCmd || [];
   window.notsyCmd.push(function() {
     window.notsyInit({
       pageVersionAutodetect: true,
-            targeting: [['lang', window.uprLang]]
+            targeting: [['lang', 'ua']] // возможные значения ua, ru, en
     });
   });
 </script>
@@ -994,28 +988,16 @@ gtag('config', 'UA-554376-23');
         #UPR_ITA iframe {min-width: 336px}
     }
 
-    @media (min-width: 768px) {
-        .nts-ad[data-ym-ad="UPR_BTA"], .nts-ad[data-ym-ad="UPR_ITC"] {min-height: 400px}
-    }
-
     @media (max-width: 800px) {
         .unit_news_banner_left .nts-ad[data-ym-ad="UPR_SBL"], .nts-ad[data-ym-ad="UPR_SBL"] {display: none !important}
     }
 
-    @media (min-width: 761px) {
-        .nts-ad[data-ym-ad="UPR_ITC_3"] {display: none}
-    }
-
-    @media (min-width: 801px) {
-        .nts-ad[data-ym-ad="UPR_ITA"] {display: none}
-    }
-
-    @media (min-width: 990px) {
-        .nts-ad[data-ym-ad="UPR_ITC_2"] {display: none}
+    @media (min-width: 993px) {
+        .nts-ad[data-ym-ad="UPR_ITA"], .nts-ad[data-ym-ad="UPR_ITC_2"] {display: none}
     }
 
     @media (max-width: 1160px) {
-        .unit_side_banner .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_2"], .nts-ad[data-ym-ad="UPR_SBR"] {display: none}
+        .unit_side_banner .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_2"] {display: none}
     }
 
     .nts-video-wrapper {padding-top: 10px;padding-bottom: 20px}
@@ -1184,7 +1166,7 @@ function tw_share() {
 </script>
 
 <div class="post_statistic">
-    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>899414</div>
+    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>899073</div>
     
 </div>
 
@@ -1207,7 +1189,7 @@ function tw_share() {
 <p class="p1"><span class="s1">Відбулось збройне вторгнення військ Російської Федерації по всім напрямам, включаючи ділянку кордону з республікою Білорусь та адмінмежу з АР Крим.&nbsp;</span></p>
 <p>По всій Україні, від окупованого сходу до підконтрольного уряду заходу, <a href="https://www.pravda.com.ua/news/2022/02/24/7325225/">почались ракетні удари</a>. РФ б&lsquo;є по військових базах, аеропортах і стратегічних об&lsquo;єктах.&nbsp;На Сумщині загарбники напали на загін прикордонників. На кількох ділянках кордону заходить військова техніка: танки, БТР, ГРАДи. З білоруської сторони росіяни здійснили прорив на танках. На морі кілька нерозпізнаних об'єктів рухаються у бік України.</p>
 <p>Росіяни захопили села Мілове та Городище на Луганщині.&nbsp;</p><div class="nts-ad nts-ad-h280" data-ym-ad="UPR_ITA">
-    <div class="UPR_ITA"></div>
+    <div id="UPR_ITA"></div>
 </div>
 
 <p></p>
@@ -2007,7 +1989,7 @@ function tw_share() {
 
                         <div class="unit_news_banner_bottom">
                         <div class="nts-ad" data-ym-ad="UPR_BTA">
-    <div class="UPR_BTA"></div>
+    <div id="UPR_BTA"></div>
 </div>
                         </div>
 
@@ -2041,8 +2023,8 @@ function tw_share() {
                             <div class="unit_side_banner">
                                 <div class="sticked">
 <div style="min-width: 300px; min-height: 600px;">
-<div class="nts-ad nts-ad-h600" data-ym-ad="UPR_SBR">
-    <div class="UPR_SBR"></div>
+<div class="nts-ad nts-ad-h600" data-ym-ad="UPR_SBR_2">
+    <div id="UPR_SBR_2"></div>
 </div>
 </div>
 </div>
@@ -2057,7 +2039,7 @@ function tw_share() {
             </div>
         </article>
     </div>
-<div data-vr-zone=Choice class=section_choice_articles><div class=layout_main><div class=container_title>Головне на Українській правді</div><div class=container_choice_articles_list_wrapper><div class=g-scrolling-carousel><div class=items><div data-vr-contentbox="Керівник ГУР Кирило Буданов: Війна закінчиться виходом на наш адмінкордон " data-vr-contentbox-url=/articles/2022/05/24/7348122/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/7/1/714bc79-42budanov.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/24/7348122/>Керівник ГУР Кирило Буданов: Війна закінчиться виходом на наш адмінкордон <span></span></a></h3></div><div class=article_author> — Роман Кравець</div></div></div></div><div data-vr-contentbox="&quot;Правда, що Зеленський усім роздав зброю?&quot; Історія першого вироку за воєнний злочин " data-vr-contentbox-url=/articles/2022/05/23/7348011/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/b/9/b9cabeb-chupahivka420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/23/7348011/>"Правда, що Зеленський усім роздав зброю?" Історія першого вироку за воєнний злочин <span></span></a></h3></div><div class=article_author> — Соня Лукашова</div></div></div></div><div data-vr-contentbox="&quot;Мы вообще-то миротворцы. Но вам всем п*здец…&quot; 35 днів окупації села Обуховичі – від трагедії до фарсу " data-vr-contentbox-url=/articles/2022/05/18/7346648/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/b/6b7c75f-obuhovychy420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/18/7346648/>"Мы вообще-то миротворцы. Но вам всем п*здец…" 35 днів окупації села Обуховичі – від трагедії до фарсу <span></span></a></h3></div><div class=article_author> — Михайло Кригель</div></div></div></div><div data-vr-contentbox="Про що говорять окупанти. Чат російських військових " data-vr-contentbox-url=/articles/2022/05/16/7346425/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/9/b/9bcefd4-okupan420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/16/7346425/>Про що говорять окупанти. Чат російських військових <span></span></a></h3></div><div class=article_author> — Михайло Ткач</div></div></div></div><div data-vr-contentbox="Краще потоп у хаті, ніж москаль. Як підрив дамби та затоплення села Демидів зірвали наступ росіян на Київ " data-vr-contentbox-url=/articles/2022/05/10/7345180/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/8/2/82cb215-42damba.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/10/7345180/>Краще потоп у хаті, ніж москаль. Як підрив дамби та затоплення села Демидів зірвали наступ росіян на Київ <span></span></a></h3></div><div class=article_author> — Євген Руденко, Ельдар Сарахман</div></div></div></div><div data-vr-contentbox="Командир &quot;Азова&quot; Денис Прокопенко (Редіс): Ми зробили все можливе та неможливе, аби відтягнути на себе переважаючі сили противника " data-vr-contentbox-url=/articles/2022/05/8/7344860/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/9/9/99db989-42prokopenko.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/8/7344860/>Командир "Азова" Денис Прокопенко (Редіс): Ми зробили все можливе та неможливе, аби відтягнути на себе переважаючі сили противника <span></span></a></h3></div><div class=article_author> — Севгіль Мусаєва</div></div></div></div><div data-vr-contentbox="Царство живих. Як рибалки зі Страхолісся врятували від голоду та окупації дві тисячі людей " data-vr-contentbox-url=/articles/2022/05/3/7343559/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/1/6188e88-42golovna.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/3/7343559/>Царство живих. Як рибалки зі Страхолісся врятували від голоду та окупації дві тисячі людей <span></span></a></h3></div><div class=article_author> — Євген Руденко, Ельдар Сарахман</div></div></div></div><div data-vr-contentbox="Історичний злам в Рамштайні. Як Захід повірив у перемогу України у війні з Росією " data-vr-contentbox-url=/articles/2022/04/27/7342462/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/2/5/2525b31-zagorodnii420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/27/7342462/>Історичний злам в Рамштайні. Як Захід повірив у перемогу України у війні з Росією <span></span></a></h3></div><div class=article_author> — Андрій Загороднюк, Центр оборонних стратегій</div></div></div></div><div data-vr-contentbox="Загроза з неба. Які літаки і вертольоти використовує Росія у війні з Україною  " data-vr-contentbox-url=/articles/2022/04/19/7340707/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/c/6c31090-russian-warplanes420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/19/7340707/>Загроза з неба. Які літаки і вертольоти використовує Росія у війні з Україною  <span></span></a></h3></div><div class=article_author> — Євген Будерацький</div></div></div></div><div data-vr-contentbox="Вбивство на розі Водопровідної та Яблунської. Різанина в Бучі  " data-vr-contentbox-url=/articles/2022/04/18/7340436/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/1/7/17eebcf-kizilov420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/18/7340436/>Вбивство на розі Водопровідної та Яблунської. Різанина в Бучі  <span></span></a></h3></div><div class=article_author> — Світлана Кізілова</div></div></div></div></div></div></div></div></div><script src="/misc/v6/jquery.gScrollingCarousel.js"></script><script> $(document).ready(function(){if(window.matchMedia("(min-width: 990px)").matches){$(".g-scrolling-carousel .items").gScrollingCarousel();
+<div data-vr-zone=Choice class=section_choice_articles><div class=layout_main><div class=container_title>Головне на Українській правді</div><div class=container_choice_articles_list_wrapper><div class=g-scrolling-carousel><div class=items><div data-vr-contentbox="&quot;Мы вообще-то миротворцы. Но вам всем п*здец…&quot; 35 днів окупації села Обуховичі – від трагедії до фарсу " data-vr-contentbox-url=/articles/2022/05/18/7346648/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/b/6b7c75f-obuhovychy420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/18/7346648/>"Мы вообще-то миротворцы. Но вам всем п*здец…" 35 днів окупації села Обуховичі – від трагедії до фарсу <span></span></a></h3></div><div class=article_author> — Михайло Кригель</div></div></div></div><div data-vr-contentbox="Про що говорять окупанти. Чат російських військових " data-vr-contentbox-url=/articles/2022/05/16/7346425/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/9/b/9bcefd4-okupan420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/16/7346425/>Про що говорять окупанти. Чат російських військових <span></span></a></h3></div><div class=article_author> — Михайло Ткач</div></div></div></div><div data-vr-contentbox="Краще потоп у хаті, ніж москаль. Як підрив дамби та затоплення села Демидів зірвали наступ росіян на Київ " data-vr-contentbox-url=/articles/2022/05/10/7345180/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/8/2/82cb215-42damba.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/10/7345180/>Краще потоп у хаті, ніж москаль. Як підрив дамби та затоплення села Демидів зірвали наступ росіян на Київ <span></span></a></h3></div><div class=article_author> — Євген Руденко, Ельдар Сарахман</div></div></div></div><div data-vr-contentbox="Командир &quot;Азова&quot; Денис Прокопенко (Редіс): Ми зробили все можливе та неможливе, аби відтягнути на себе переважаючі сили противника " data-vr-contentbox-url=/articles/2022/05/8/7344860/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/9/9/99db989-42prokopenko.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>інтерв'ю</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/8/7344860/>Командир "Азова" Денис Прокопенко (Редіс): Ми зробили все можливе та неможливе, аби відтягнути на себе переважаючі сили противника <span></span></a></h3></div><div class=article_author> — Севгіль Мусаєва</div></div></div></div><div data-vr-contentbox="&quot;Жінкам обіцяли надіслати голови чоловіків.&quot; Історії тих, хто вирвався з &quot;Азовсталі&quot; " data-vr-contentbox-url=/articles/2022/05/3/7343828/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/8/3/833769c-42mariupolci.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/3/7343828/>"Жінкам обіцяли надіслати голови чоловіків." Історії тих, хто вирвався з "Азовсталі" <span></span></a></h3></div><div class=article_author> — Соня Лукашова, Федір Попадюк</div></div></div></div><div data-vr-contentbox="Царство живих. Як рибалки зі Страхолісся врятували від голоду та окупації дві тисячі людей " data-vr-contentbox-url=/articles/2022/05/3/7343559/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/1/6188e88-42golovna.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/05/3/7343559/>Царство живих. Як рибалки зі Страхолісся врятували від голоду та окупації дві тисячі людей <span></span></a></h3></div><div class=article_author> — Євген Руденко, Ельдар Сарахман</div></div></div></div><div data-vr-contentbox="Історичний злам в Рамштайні. Як Захід повірив у перемогу України у війні з Росією " data-vr-contentbox-url=/articles/2022/04/27/7342462/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/2/5/2525b31-zagorodnii420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/27/7342462/>Історичний злам в Рамштайні. Як Захід повірив у перемогу України у війні з Росією <span></span></a></h3></div><div class=article_author> — Андрій Загороднюк, Центр оборонних стратегій</div></div></div></div><div data-vr-contentbox="Загроза з неба. Які літаки і вертольоти використовує Росія у війні з Україною  " data-vr-contentbox-url=/articles/2022/04/19/7340707/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/6/c/6c31090-russian-warplanes420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/19/7340707/>Загроза з неба. Які літаки і вертольоти використовує Росія у війні з Україною  <span></span></a></h3></div><div class=article_author> — Євген Будерацький</div></div></div></div><div data-vr-contentbox="Вбивство на розі Водопровідної та Яблунської. Різанина в Бучі  " data-vr-contentbox-url=/articles/2022/04/18/7340436/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/1/7/17eebcf-kizilov420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/18/7340436/>Вбивство на розі Водопровідної та Яблунської. Різанина в Бучі  <span></span></a></h3></div><div class=article_author> — Світлана Кізілова</div></div></div></div><div data-vr-contentbox="&quot;Ми мололи пшеницю на кавомолці, щоб нічого не брати в росіян&quot;. Як жителі Київщини жили в окупації " data-vr-contentbox-url=/articles/2022/04/9/7338269/ class="article article_choice_pic"><div class=article_body><div class=article_media_wrapper><picture><img loading=lazy class=lazyload data-src="https://img.pravda.com/images/doc/e/e/ee2d063-borodianka420.jpg" width=420 height=598></picture><div class=article_shade></div></div><div class=article_content><div class=heading_wrapper><div class=heading>репортаж</div></div><div class=article_header><h3><a data-vr-headline href=/articles/2022/04/9/7338269/>"Ми мололи пшеницю на кавомолці, щоб нічого не брати в росіян". Як жителі Київщини жили в окупації <span></span></a></h3></div><div class=article_author> — Євген Будерацький</div></div></div></div></div></div></div></div></div><script src="/misc/v6/jquery.gScrollingCarousel.js"></script><script> $(document).ready(function(){if(window.matchMedia("(min-width: 990px)").matches){$(".g-scrolling-carousel .items").gScrollingCarousel();
 }});</script>
 </div>
 <footer class="footer">
