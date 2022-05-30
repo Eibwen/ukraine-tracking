@@ -965,15 +965,19 @@ gtag('config', 'UA-554376-23');
 <script src="https://www.pravda.com.ua/misc/jquery.sticky.js"></script>
 
 
+<script>
+    window.uprLang = 'ua';
+</script>
+
 <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=2"></script>
+<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=4"></script>
 
 <script>
   window.notsyCmd = window.notsyCmd || [];
   window.notsyCmd.push(function() {
     window.notsyInit({
       pageVersionAutodetect: true,
-            targeting: [['lang', 'ua']] // возможные значения ua, ru, en
+            targeting: [['lang', window.uprLang]]
     });
   });
 </script>
@@ -990,16 +994,28 @@ gtag('config', 'UA-554376-23');
         #UPR_ITA iframe {min-width: 336px}
     }
 
+    @media (min-width: 768px) {
+        .nts-ad[data-ym-ad="UPR_BTA"], .nts-ad[data-ym-ad="UPR_ITC"] {min-height: 400px}
+    }
+
     @media (max-width: 800px) {
         .unit_news_banner_left .nts-ad[data-ym-ad="UPR_SBL"], .nts-ad[data-ym-ad="UPR_SBL"] {display: none !important}
     }
 
-    @media (min-width: 993px) {
-        .nts-ad[data-ym-ad="UPR_ITA"], .nts-ad[data-ym-ad="UPR_ITC_2"] {display: none}
+    @media (min-width: 761px) {
+        .nts-ad[data-ym-ad="UPR_ITC_3"] {display: none}
+    }
+
+    @media (min-width: 801px) {
+        .nts-ad[data-ym-ad="UPR_ITA"] {display: none}
+    }
+
+    @media (min-width: 990px) {
+        .nts-ad[data-ym-ad="UPR_ITC_2"] {display: none}
     }
 
     @media (max-width: 1160px) {
-        .unit_side_banner .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_2"] {display: none}
+        .unit_side_banner .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_1"], .nts-ad[data-ym-ad="UPR_SBR_2"], .nts-ad[data-ym-ad="UPR_SBR"] {display: none}
     }
 
     .nts-video-wrapper {padding-top: 10px;padding-bottom: 20px}
@@ -1168,7 +1184,7 @@ function tw_share() {
 </script>
 
 <div class="post_statistic">
-    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>899314</div>
+    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>899448</div>
     
 </div>
 
@@ -1191,7 +1207,7 @@ function tw_share() {
 <p class="p1"><span class="s1">Відбулось збройне вторгнення військ Російської Федерації по всім напрямам, включаючи ділянку кордону з республікою Білорусь та адмінмежу з АР Крим.&nbsp;</span></p>
 <p>По всій Україні, від окупованого сходу до підконтрольного уряду заходу, <a href="https://www.pravda.com.ua/news/2022/02/24/7325225/">почались ракетні удари</a>. РФ б&lsquo;є по військових базах, аеропортах і стратегічних об&lsquo;єктах.&nbsp;На Сумщині загарбники напали на загін прикордонників. На кількох ділянках кордону заходить військова техніка: танки, БТР, ГРАДи. З білоруської сторони росіяни здійснили прорив на танках. На морі кілька нерозпізнаних об'єктів рухаються у бік України.</p>
 <p>Росіяни захопили села Мілове та Городище на Луганщині.&nbsp;</p><div class="nts-ad nts-ad-h280" data-ym-ad="UPR_ITA">
-    <div id="UPR_ITA"></div>
+    <div class="UPR_ITA"></div>
 </div>
 
 <p></p>
@@ -1991,7 +2007,7 @@ function tw_share() {
 
                         <div class="unit_news_banner_bottom">
                         <div class="nts-ad" data-ym-ad="UPR_BTA">
-    <div id="UPR_BTA"></div>
+    <div class="UPR_BTA"></div>
 </div>
                         </div>
 
@@ -2026,7 +2042,7 @@ function tw_share() {
                                 <div class="sticked">
 <div style="min-width: 300px; min-height: 600px;">
 <div class="nts-ad nts-ad-h600" data-ym-ad="UPR_SBR">
-    <div id="UPR_SBR"></div>
+    <div class="UPR_SBR"></div>
 </div>
 </div>
 </div>
