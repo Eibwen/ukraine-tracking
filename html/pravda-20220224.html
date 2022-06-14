@@ -134,6 +134,7 @@ if(top != self) top.location.replace(location);
 .container_sub_side_news .container_title {padding-bottom: 0;}
 .container_sub_side_news_theme .container_sub_news_wrapper {padding-top: 20px;}
 
+
 .war_section .layout-main {padding: 0 12px;}
 
 .container_special {display: none;}
@@ -964,19 +965,42 @@ gtag('config', 'UA-554376-23');
 
 <script src="https://www.pravda.com.ua/misc/jquery.sticky.js"></script>
 
+<script>
+(function () {
+    var deviceCategory = 'desktop';
+    if (
+        'ontouchstart' in document.documentElement &&
+        window.matchMedia('only screen') &&
+        (
+            window.matchMedia('(orientation: portrait) and (max-width: 480px)').matches ||
+            window.matchMedia('(orientation: landscape) and (max-height: 480px)').matches
+        )
+    ) {
+        deviceCategory = 'mobile';
+    }
+    var pathname = document.location.pathname;
+    var page = 'page';
+    if (['/', '/rus/', '/eng/'].indexOf(pathname) !== -1) {
+        page = 'home_page';
+    } else if (['/news/', '/rus/news/'].indexOf(pathname) !== -1) {
+        page = 'news_page';
+    }
+    window.ymPage = page + '_' + deviceCategory;
+})();
+</script>
 
 <script>
     window.uprLang = 'ua';
 </script>
 
 <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=4"></script>
+<script async="async" src="https://cdn.membrana.media/upr/ym.js?v=5"></script>
 
 <script>
   window.notsyCmd = window.notsyCmd || [];
   window.notsyCmd.push(function() {
     window.notsyInit({
-      pageVersionAutodetect: true,
+      page: window.ymPage,
             targeting: [['lang', window.uprLang]]
     });
   });
@@ -1184,7 +1208,7 @@ function tw_share() {
 </script>
 
 <div class="post_statistic">
-    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>899934</div>
+    <div class="post_views"><img src="/images/v6/ico_eye.svg" alt=""/>900156</div>
     
 </div>
 
